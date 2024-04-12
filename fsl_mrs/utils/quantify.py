@@ -213,6 +213,8 @@ class QuantificationInfo(object):
                 self.t1 = STANDARD_T1['7T']
             elif field > 2.5 and field < 3.5:
                 self.t1 = STANDARD_T1['3T']
+            elif field > 1.0 and field < 2.0:
+                self.t1 = STANDARD_T1['1.5T']
             else:
                 raise ValueError(f'No stored T1 values for {field}T scanner. Specify values manually.')
 
@@ -229,6 +231,8 @@ class QuantificationInfo(object):
                 self.t2 = STANDARD_T2['7T']
             elif field > 2.5 and field < 3.5:
                 self.t2 = STANDARD_T2['3T']
+            elif field > 1.0 and field < 2.0:
+                self.t2 = STANDARD_T2['1.5T']
             else:
                 raise ValueError(f'No stored T2 values for {field}T scanner. Specify values manually.')
 
