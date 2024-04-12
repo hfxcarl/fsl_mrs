@@ -93,7 +93,15 @@ WATER_SCALING_DEFAULT_LIMITS = [(2, 5), (2, 5), (2, 5), (1.8, 2.2)]
 # T1 parameters
 # Derived from a survey of the literature. References listed below.
 # Metabolite values derived from an average of NAA, Cr and Cho peaks.
-STANDARD_T1 = {'3T': {'H2O_WM': 0.97,  # Ref: 1-6
+# 
+#  Example (from Ref #2):
+#   T1_3T_metabs = (1.35+1.08+1.24+1.47+1.30+1.46)/6.0 == 1.31667
+
+STANDARD_T1 = {'1.5T':{'H2O_WM': 0.500,  # Ref: 16
+                      'H2O_GM':  0.833,  # Ref: 16
+                      'H2O_CSF': 2.569,  # Ref: 16 
+                      'METAB':   1.20},  # Ref: 2, 7-9 *** 
+               '3T': {'H2O_WM': 0.97,  # Ref: 1-6
                       'H2O_GM': 1.50,  # Ref: 1-6
                       'H2O_CSF': 4.47,  # Ref: 4
                       'METAB': 1.29},  # Ref: 2, 7-9
@@ -103,7 +111,14 @@ STANDARD_T1 = {'3T': {'H2O_WM': 0.97,  # Ref: 1-6
                       'METAB': 1.43}}  # Ref: 2, 7-9
 
 # T2 parameters
-STANDARD_T2 = {'3T': {'H2O_WM': 0.073,  # Ref: 1,3,10-11
+#  Example (from Ref #7):
+#   T2_3T_metabs = (0.247+0.152+0.207+0.295+0.156+0.187)/6.0 == 0.2073
+
+STANDARD_T2 = {'1.5T':{'H2O_WM': 0.070,  # Ref: 16
+                      'H2O_GM':  0.083,  # Ref: 16
+                      'H2O_CSF': 0.329,  # Ref: 16
+                      'METAB':   0.210}, # Ref: 7-9,13-15 ***
+               '3T': {'H2O_WM': 0.073,  # Ref: 1,3,10-11
                       'H2O_GM': 0.088,  # Ref: 1,3,10-11
                       'H2O_CSF': 2.030,  # Ref: 12
                       'METAB': 0.194},  # Ref: 7-9,13-15
@@ -130,6 +145,7 @@ T1 & T2 References:
 13. Marjańska M et al. doi: 10.1002/nbm.1754.
 14. Träber F et al. doi: 10.1002/jmri.20053.
 15. Wyss PO et al. doi: 10.1002/mrm.27067.
+16. Tönnes et al., 2023, doi: 10.1007/s10916-023-02004-4
 '''
 
 '''
