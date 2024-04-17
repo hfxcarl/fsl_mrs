@@ -58,7 +58,11 @@ __________________________
 
 Code definitions::
 
-    STANDARD_T1 = { '3T':{'H2O_WM':0.97, # Ref: 1-6
+    STANDARD_T1 = { '1.5T':{'H2O_WM': 0.500,  # Ref: 16
+                      'H2O_GM':  0.833,  # Ref: 16
+                      'H2O_CSF': 2.569,  # Ref: 16 
+                      'METAB':   1.20},  # Ref: 2, 7-9 *** 
+                    '3T':{'H2O_WM':0.97, # Ref: 1-6
                         'H2O_GM':1.50, # Ref: 1-6
                         'H2O_CSF':4.47, # Ref: 4
                         'METAB':1.29}, # Ref: 2, 7-9
@@ -67,7 +71,11 @@ Code definitions::
                         'H2O_CSF':4.43, # Ref: 4
                         'METAB':1.43}} # Ref: 2, 7-9
 
-    STANDARD_T2 = { '3T':{'H2O_WM':0.073, # Ref: 1,3,10-11
+    STANDARD_T2 = { '1.5T':{'H2O_WM': 0.070,  # Ref: 16
+                      'H2O_GM':  0.083,  # Ref: 16
+                      'H2O_CSF': 0.329,  # Ref: 16
+                      'METAB':   0.210}, # Ref: 7-9,13-15 ***
+                    '3T':{'H2O_WM':0.073, # Ref: 1,3,10-11
                         'H2O_GM':0.088, # Ref: 1,3,10-11
                         'H2O_CSF':2.030, # Ref: 12
                         'METAB':0.194}, # Ref: 7-9,13-15
@@ -96,3 +104,4 @@ References
 .. [13] Marjańska M et al. doi: 10.1002/nbm.1754.
 .. [14] Träber F et al. doi: 10.1002/jmri.20053.
 .. [15] Wyss PO et al. doi: 10.1002/mrm.27067.
+.. [16] Tönnes et al., 2023, doi: 10.1007/s10916-023-02004-4.
